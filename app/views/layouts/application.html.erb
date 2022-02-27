@@ -10,7 +10,16 @@
     <%= javascript_include_tag "application", "data-turbo-track": "reload", defer: true %>
   </head>
 
-  <body>
-    <%= yield %>
+  <body conroller="hello">
+  <div class="container">
+    <button type="button"
+            class="btn btn-lg btn-danger"
+            data-bs-toggle="popover"
+            title="Popover title"
+            data-bs-content="Amazing content, right ?">
+      Click to toggle popover
+    </button>
+      <%= yield %>
+    </div>
   </body>
 </html>
