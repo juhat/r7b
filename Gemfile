@@ -77,3 +77,5 @@ end
 
 gem "simple_form", "~> 5.1"
 # gem "ruby-vips"
+gem "devise", "~> 4.8"
+gem "devise-passwordless", git: "git@github.com:abevoelker/devise-passwordless.git"
