@@ -10,44 +10,14 @@
     <%= javascript_include_tag "application", "data-turbo-track": "reload", defer: true %>
   </head>
 
-  <body conroller="hello">
-  <nav class="navbar navbar-expand-lg navbar-light bg-light">
-    <div class="container-fluid">
-      <a class="navbar-brand" href="#">R7B</a>
-      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-        <span class="navbar-toggler-icon"></span>
-      </button>
-      <div class="collapse navbar-collapse" id="navbarSupportedContent">
-        <ul class="navbar-nav me-auto mb-2 mb-lg-0">
-          <li class="nav-item">
-            <a class="nav-link active" aria-current="page" href="/">Home</a>
-          </li>
-          <% if current_user %>
-            <li class="nav-item">
-              <%= current_user.email %>
-            </li>
-            <li class="nav-item">
-              <%= button_to 'Sign out', destroy_user_session_path, method: :delete, data: {turbo: false}, class: 'nav-link' %>
-            </li>
-          <% else %>
-            <li class="nav-item">
-              <a class="nav-link" href="/users/sign_in">Sign in</a>
-            </li>
-          <% end %>
-        </ul>
-      </div>
-    </div>
-  </nav>
+  <body>
+
+  <%= render 'layouts/navbar' %>
+
   <div class="container">
-    <button type="button"
-            class="btn btn-lg btn-primary"
-            data-bs-toggle="popover"
-            title="Popover title"
-            data-bs-content="Amazing content, right ?">
-      Click to toggle popover
-    </button>
-    <p class="notice"><%= notice %></p>
-    <p class="alert"><%= alert %></p>
+      <% if notice %><p class="alert alert-success"><%= notice %></p><% end %>
+      <% if alert %><p class="alert alert-danger"><%= alert %></p><% end %>
+
       <%= yield %>
     </div>
   </body>
