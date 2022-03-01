@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
 <head>
-  <title>R7b</title>
+  <title><%= Setting.app_name %></title>
   <meta name="viewport" content="width=device-width,initial-scale=1">
   <%= csrf_meta_tags %>
   <%= csp_meta_tag %>
@@ -13,7 +13,7 @@
 <body>
 
 
-<% render 'layouts/navbar' %>
+<%= render 'layouts/navbar' %>
 
 <div class="container">
   <div class="mt-4 text-center">

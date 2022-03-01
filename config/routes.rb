@@ -13,6 +13,10 @@ Rails.application.routes.draw do
         as: "users_magic_link"
   end
 
+  namespace :admin do
+    resource :settings
+  end
+
   resources :posts
   # Define your application routes per the DSL in https://guides.rubyonrails.org/routing.html
 
