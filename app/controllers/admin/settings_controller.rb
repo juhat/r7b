@@ -1,5 +1,8 @@
 module Admin
   class SettingsController < ApplicationController
+    before_action :authenticate_user!
+    before_action -> { redirect_to root_path, alert: 'Not an admin' unless current_user.admin? }
+
     def show
       @errors = []
     end

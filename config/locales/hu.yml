@@ -1,0 +1,5 @@
+hu:
+  layouts:
+    navbar:
+      dashboard: Kezdőlap
+      settings: Beállítások

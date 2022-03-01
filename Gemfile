@@ -83,3 +83,5 @@ gem "devise-passwordless", git: "git@github.com:abevoelker/devise-passwordless.g
 gem "devise_invitable", "~> 2.0"
 
 gem "rails-settings-cached", "~> 2.8"
+
+gem "rails-i18n", "~> 7.0"
