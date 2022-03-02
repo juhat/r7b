@@ -3,3 +3,8 @@ en:
     navbar:
       dashboard: Home
       settings: Settings
+      sign_up: Sign up
+      sign_in: Sign in
+      sign_out: Sign out
+      mailbox: Mailbox
+      confirm: Are you sure?

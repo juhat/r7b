@@ -85,3 +85,5 @@ gem "devise_invitable", "~> 2.0"
 gem "rails-settings-cached", "~> 2.8"
 
 gem "rails-i18n", "~> 7.0"
+
+gem "standard", "~> 1.7"

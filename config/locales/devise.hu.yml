@@ -1,6 +1,12 @@
 ---
 hu:
   devise:
+    shared:
+      links:
+        sign_in: Bejelentkezés
+        sign_up: Regisztráció
+        sign_out: Kijelentkezés
+        resend_confirmation: A regisztrációs email újraküldése
     confirmations:
       confirmed: "Az email címed megerősítése sikerült!"
       send_instructions: "Pár percen belül érkezni fog az email fiókodba egy üzenet tőlünk. Kövesd az utasításokat!"

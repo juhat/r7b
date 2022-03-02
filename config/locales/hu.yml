@@ -3,3 +3,8 @@ hu:
     navbar:
       dashboard: Kezdőlap
       settings: Beállítások
+      sign_up: Regisztráció
+      sign_in: Bejelentkezés
+      sign_out: Kijelentkezés
+      mailbox: Levelesláda
+      confirm: Biztos vagy benne?

@@ -17,7 +17,7 @@
       <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
         <% if Rails.env.development? %>
           <li class="nav-item">
-            <%= link_to 'LetterOpener', letter_opener_web_path, class: 'nav-link' %>
+            <%= link_to t('.mailbox'), letter_opener_web_path, class: 'nav-link' %>
           </li>
         <% end %>
         <% if current_user&.admin? %>
@@ -38,14 +38,14 @@
             <%= link_to current_user.email, edit_user_registration_path, class: 'nav-link' %>
           </li>
           <li class="nav-item">
-            <%= button_to 'Sign out', destroy_user_session_path, method: :delete, data: {confirm: "Are you sure?"}, class: 'nav-link btn' %>
+            <%= button_to t('.sign_out'), destroy_user_session_path, method: :delete, data: {confirm: t('.confirm')}, class: 'nav-link btn' %>
           </li>
         <% else %>
           <li class="nav-item">
-            <%= link_to 'Sign in', new_user_session_path, class: 'nav-link btn' %>
+            <%= link_to t('.sign_in'), new_user_session_path, class: 'nav-link btn' %>
           </li>
           <li class="nav-item">
-            <%= link_to 'Sign up', new_user_registration_path, class: 'nav-link btn' %>
+            <%= link_to t('.sign_up'), new_user_registration_path, class: 'nav-link btn' %>
           </li>
         <% end %>
       </ul>
