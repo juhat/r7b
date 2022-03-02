@@ -1,14 +1,14 @@
 module Admin
   class SettingsController < ApplicationController
     before_action :authenticate_user!
-    before_action -> { redirect_to root_path, alert: 'Not an admin' unless current_user.admin? }
+    before_action -> { redirect_to root_path, alert: "Not an admin" unless current_user.admin? }
 
     def show
       @errors = []
     end
 
     def create
-      @errors = [] #ActiveModel::Errors.new
+      @errors = [] # ActiveModel::Errors.new
       setting_params.keys.each do |key|
         next if setting_params[key].nil?
 

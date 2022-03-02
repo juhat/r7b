@@ -3,7 +3,7 @@
 class Devise::Passwordless::SessionsController < Devise::SessionsController
   def create
     self.resource = resource_class.find_by(email: create_params[:email])
-    if self.resource
+    if resource
       resource.send_magic_link(create_params[:remember_me])
       set_flash_message(:notice, :magic_link_sent, now: true)
     else

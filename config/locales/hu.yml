@@ -1,4 +1,6 @@
 hu:
+  buttons:
+    send: Mehet!
   layouts:
     navbar:
       dashboard: Kezdőlap

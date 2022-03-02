@@ -1,13 +1,15 @@
 ---
 hu:
   devise:
+    sign_in: Bejelentkezés
+    sign_up: Regisztráció
+    sign_out: Kijelentkezés
     shared:
       links:
-        sign_in: Bejelentkezés
-        sign_up: Regisztráció
-        sign_out: Kijelentkezés
         resend_confirmation: A regisztrációs email újraküldése
     confirmations:
+      new:
+        resend_confirmation_title: A regisztrációs email újraküldése
       confirmed: "Az email címed megerősítése sikerült!"
       send_instructions: "Pár percen belül érkezni fog az email fiókodba egy üzenet tőlünk. Kövesd az utasításokat!"
       send_paranoid_instructions: "If your email address exists in our database, you will receive an email with instructions for how to confirm your email address in a few minutes."

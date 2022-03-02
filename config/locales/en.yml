@@ -1,4 +1,6 @@
 en:
+  buttons:
+    send: Save!
   layouts:
     navbar:
       dashboard: Home
