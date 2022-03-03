@@ -1,4 +1,4 @@
-<h2><%= t('.profile_title') %></h2>
+<h2><%= t('.title') %></h2>
 
 <%= simple_form_for(resource, as: resource_name, url: registration_path(resource_name), html: { method: :put }) do |f| %>
   <% f.error_notification %>
@@ -12,13 +12,13 @@
   </div>
 
   <div class="form-actions mt-4 mb-4">
-    <%= f.button :submit, t('.save'), class: 'btn btn-primary' %>
+    <%= f.button :submit, t('buttons.save'), class: 'btn btn-primary' %>
   </div>
 <% end %>
 
 <h3><%= t('.invite_title') %></h3>
 <p>
-  <%= link_to t("invite_friends"), new_user_invitation_path %><br />
+  <%= link_to t(".invite_friends"), new_user_invitation_path %><br />
 
   <ul>
     <% current_user.invites.each do |invited| %>
@@ -35,4 +35,4 @@
 
 <h3><%= t('.cancel_title') %></h3>
 
-<p><%= button_to t('.cancel_button'), registration_path(resource_name), data: { confirm: t('.confirm') }, method: :delete, class: 'btn btn-danger' %></p>
+<p><%= button_to t('buttons.destroy'), registration_path(resource_name), data: { confirm: t('confirm') }, method: :delete, class: 'btn btn-danger' %></p>

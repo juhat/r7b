@@ -18,8 +18,12 @@ Rails.application.routes.draw do
   end
 
   resources :posts
-  # Define your application routes per the DSL in https://guides.rubyonrails.org/routing.html
 
-  # Defines the root path route ("/")
-  root "posts#index"
+  authenticated :user do
+    root 'high_voltage/pages#show', id: 'dashboard', as: :authenticated_root
+  end
+
+  devise_scope :user do
+    root 'high_voltage/pages#show', id: 'marketing'
+  end
 end

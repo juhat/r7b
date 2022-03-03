@@ -87,3 +87,5 @@ gem "rails-settings-cached", "~> 2.8"
 gem "rails-i18n", "~> 7.0"
 
 gem "standard", "~> 1.7"
+
+gem "high_voltage", "~> 3.1"

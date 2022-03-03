@@ -1,45 +1,21 @@
-<%= form_for(Setting.new, url: admin_settings_path) do |f| %>
-  <% if @errors.any? %>
-    <div class="alert alert-block alert-danger">
-      <ul>
-        <% @errors.full_messages.each do |msg| %>
-          <li><%= msg %></li>
-        <% end %>
-      </ul>
-    </div>
-  <% end %>
-
-  <div class="form-group">
-    <label class="control-label">App Name</label>
-    <%= f.text_field :app_name, value: Setting.app_name, class: "form-control", placeholder: "R4B"  %>
+<%= simple_form_for(Setting.new, url: admin_settings_path) do |f| %>
+  <div class="form-inputs">
+    <%= f.input :app_name %>
   </div>
 
-  <div class="form-group">
-    <label class="control-label">Host</label>
-    <%= f.text_field :host, value: Setting.host, class: "form-control", placeholder: "http://localhost"  %>
+  <div class="form-inputs">
+    <%= f.input :host %>
   </div>
 
-<!--  <div class="form-group form-checkbox">-->
-<!--    <label>-->
-      <%#= f.check_box :captcha_enable, checked: Setting.captcha_enable? %>
-<!--      Enable/Disable Captcha-->
-<!--    </label>-->
-<!--  </div>-->
+  <%#= f.input :registration_allowed, wrapper: :custom_boolean_switch %>
 
-<!--  <div class="form-group">-->
-<!--    <label class="control-label">Admin Emails</label>-->
-    <%#= f.text_area :admin_emails, value: Setting.admin_emails.join("\n"), class: "form-control" %>
-<!--  </div>-->
+  <%= f.input :registration_allowed, as: :boolean, role: 'switch' %>
 
-<!--  <div class="form-group">-->
-<!--    <label class="control-label">Notification options</label>-->
-    <%#= f.text_area :notification_options, value: YAML.dump(Setting.notification_options), class: "form-control", style: "height: 180px;"  %>
-<!--    <div class="form-text">-->
-<!--      Use YAML format to config the SMTP_html-->
-<!--    </div>-->
-<!--  </div>-->
+  <%= f.input :invitation_allowed, as: :boolean %>
 
-  <div class="mt-4">
-    <%= f.submit 'Update Settings', class: 'btn btn-primary' %>
-  </div>
+  <%= f.input :restrict_access_to_allowed_email_addresses, as: :boolean %>
+
+  <%= f.input :allowed_email_addresses, input_html: { value: Setting.allowed_email_addresses.join(", ") }, as: :text %>
+
+  <%= f.button :submit, class: 'btn btn-primary' %>
 <% end %>

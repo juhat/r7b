@@ -4,6 +4,15 @@ class Setting < RailsSettings::Base
 
   field :app_name, default: "R4B", validates: {presence: true, length: {in: 2..20}}
   field :host, default: "http://example.com"
+  field :registration_allowed, type: :boolean, default: true
+  field :invitation_allowed, type: :boolean, default: true
+
+  field :restrict_access_to_allowed_email_addresses, type: :boolean, default: false
+  field :allowed_email_addresses, type: :array, separator: /[\n,]/
+
+
+
+
   # field :default_locale, default: "zh-CN", validates: { presence: true, inclusion: { in: %w[zh-CN en jp] } }, option_values: %w[en zh-CN jp], help_text: "Bla bla ..."
   # field :admin_emails, type: :array, default: %w[admin@rubyonrails.org]
   #

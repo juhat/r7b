@@ -1,6 +1,9 @@
 hu:
+  confirm: Biztos vagy benne?
   buttons:
     send: Mehet!
+    save: Mentés!
+    destroy: Törlés!
   layouts:
     navbar:
       dashboard: Kezdőlap
@@ -9,4 +12,3 @@ hu:
       sign_in: Bejelentkezés
       sign_out: Kijelentkezés
       mailbox: Levelesláda
-      confirm: Biztos vagy benne?

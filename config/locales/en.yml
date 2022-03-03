@@ -1,6 +1,9 @@
 en:
+  confirm: Are you sure?
   buttons:
     send: Save!
+    save: Save!
+    destroy: Destroy!
   layouts:
     navbar:
       dashboard: Home
@@ -9,4 +12,3 @@ en:
       sign_in: Sign in
       sign_out: Sign out
       mailbox: Mailbox
-      confirm: Are you sure?
