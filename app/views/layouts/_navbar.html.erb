@@ -56,12 +56,11 @@
               <%= t('lang') %>
             </a>
             <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
-              <li>
-                <%= link_to t('hu'), root_path(lang: 'hu'), class: 'dropdown-item' %>
-              </li>
-              <li>
-                <%= link_to t('en'), root_path(lang: 'en'), class: 'dropdown-item' %>
-              </li>
+              <% I18n.available_locales.select{ |lang| lang != I18n.locale }.each do |lang| %>
+                <li>
+                  <%= link_to t(lang), root_path(lang: lang), class: 'dropdown-item' %>
+                </li>
+              <% end %>
             </ul>
           </li>
         <% end %>
