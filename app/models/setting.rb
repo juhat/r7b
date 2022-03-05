@@ -10,6 +10,7 @@ class Setting < RailsSettings::Base
   field :restrict_access_to_allowed_email_addresses, type: :boolean, default: false
   field :allowed_email_addresses, type: :array, separator: /[\n,]/
 
+  field :language_setting_allowed, type: :boolean, default: true
 
 
 

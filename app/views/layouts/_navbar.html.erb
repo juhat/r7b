@@ -38,17 +38,32 @@
             <%= link_to current_user.email, edit_user_registration_path, class: 'nav-link' %>
           </li>
           <li class="nav-item">
-            <%= button_to t('.sign_out'), destroy_user_session_path, method: :delete, data: {confirm: t('confirm')}, class: 'nav-link btn' %>
+            <%= button_to t('devise.sign_out'), destroy_user_session_path, method: :delete, data: {confirm: t('confirm')}, class: 'nav-link btn' %>
           </li>
         <% else %>
           <li class="nav-item">
-            <%= link_to t('.sign_in'), new_user_session_path, class: 'nav-link btn' %>
+            <%= link_to t('devise.sign_in'), new_user_session_path, class: 'nav-link btn' %>
           </li>
           <% if Setting.registration_allowed %>
             <li class="nav-item">
-              <%= link_to t('.sign_up'), new_user_registration_path, class: 'nav-link btn' %>
+              <%= link_to t('devise.sign_up'), new_user_registration_path, class: 'nav-link btn' %>
             </li>
           <% end %>
+        <% end %>
+        <% if Setting.language_setting_allowed && I18n.available_locales.count > 1 %>
+          <li class="nav-item dropdown border-start">
+            <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+              <%= t('lang') %>
+            </a>
+            <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+              <li>
+                <%= link_to t('hu'), root_path(lang: 'hu'), class: 'dropdown-item' %>
+              </li>
+              <li>
+                <%= link_to t('en'), root_path(lang: 'en'), class: 'dropdown-item' %>
+              </li>
+            </ul>
+          </li>
         <% end %>
       </ul>
     </div>

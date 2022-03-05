@@ -1,4 +1,7 @@
 en:
+  lang: Lang
+  hu: Hungarian
+  en: English
   confirm: Are you sure?
   buttons:
     send: Save!

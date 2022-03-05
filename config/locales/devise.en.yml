@@ -37,6 +37,9 @@ en:
         subject: "Password Changed"
       magic_link:
         subject: "Here's your magic login link ✨"
+        magic_login_instruction: Here is your link to sign in
+        magic_login_link_text: Sign in here!
+        expirity_message: "It will expire in :"
     omniauth_callbacks:
       failure: "Could not authenticate you from %{kind} because \"%{reason}\"."
       success: "Successfully authenticated from %{kind} account."

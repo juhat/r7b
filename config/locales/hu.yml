@@ -1,4 +1,7 @@
 hu:
+  lang: Nyelv
+  hu: Magyar
+  en: Angol
   confirm: Biztos vagy benne?
   buttons:
     send: Mehet!

@@ -11,15 +11,14 @@ import "@rails/actiontext"
 // })
 //
 
-// confirm for forms
-document.addEventListener("turbo:submit-start", (event) => {
-  confirmSubmission(event).then(() => {
-    // show progress bar and set submit state here.
-    // this block is optional.
+// confirm for forms, tooltips
+document.addEventListener("turbo:load", () => {
+  var tooltipTriggerList = [].slice.call(document.querySelectorAll('[data-bs-toggle="tooltip"]'))
+  var tooltipList = tooltipTriggerList.map(function (tooltipTriggerEl) {
+    return new bootstrap.Tooltip(tooltipTriggerEl)
   })
 })
-
-function confirmSubmission(event) {
+document.addEventListener("turbo:submit-start", (event) => {
   const button = event.target.querySelector("[data-confirm]")
   const message = button?.dataset?.confirm
 
@@ -32,4 +31,4 @@ function confirmSubmission(event) {
       event.stopImmediatePropagation()
     }
   })
-}
+})
