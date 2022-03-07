@@ -7,13 +7,15 @@ class User < ApplicationRecord
 
   validates :email, inclusion: {
     in: Setting.allowed_email_addresses + User.admin.pluck(:email)
-  }, if: Proc.new { Setting.restrict_access_to_allowed_email_addresses }
+  }, if: proc { Setting.restrict_access_to_allowed_email_addresses }
 
   # Devise password-less
   def update_with_password(params, *options)
     update(params, *options)
   end
-  def after_database_authentication; end
-  def password_required?; false; end
 
+  def after_database_authentication
+  end
+
+  def password_required?() = false
 end

@@ -20,10 +20,10 @@ Rails.application.routes.draw do
   resources :posts
 
   authenticated :user do
-    root 'high_voltage/pages#show', id: 'dashboard', as: :authenticated_root
+    root "high_voltage/pages#show", id: "dashboard", as: :authenticated_root
   end
 
   devise_scope :user do
-    root 'high_voltage/pages#show', id: 'marketing'
+    root "high_voltage/pages#show", id: "marketing"
   end
 end

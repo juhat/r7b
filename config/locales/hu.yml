@@ -1,17 +1,61 @@
+---
 hu:
-  lang: Nyelv
-  hu: Magyar
-  en: Angol
-  confirm: Biztos vagy benne?
   buttons:
-    send: Mehet!
-    save: Mentés!
     destroy: Törlés!
+    save: Mentés!
+    send: Mehet!
+  confirm: Biztos vagy benne?
+  devise:
+    confirmations:
+      new:
+        resend_confirmation_title: Resend confirmation title
+    invitations:
+      edit:
+        header: Header
+        submit_button: Submit button
+      new:
+        header: Header
+        submit_button: Submit button
+    mailer:
+      confirmation_instructions:
+        instruction: Instruction
+        link_text: Link text
+      email_changed:
+        your_email_changed_to: Your email changed to
+      invitation_instructions:
+        accept: Accept
+        accept_until: Accept until
+        hello: Hello
+        ignore: Ignore
+        someone_invited_you: Someone invited you
+      magic_link:
+        expirity_message: Expirity message
+        magic_login_instruction: Magic login instruction
+        magic_login_link_text: Magic login link text
+    registrations:
+      edit:
+        cancel_title: Cancel title
+        invite_friends: Invite friends
+        invite_title: Invite title
+        title: Title
+        unconfirmed: Unconfirmed
+    shared:
+      links:
+        resend_confirmation: Resend confirmation
+    sign_in: Sign in
+    sign_out: Sign out
+    sign_up: Sign up
+  en: Angol
+  errors:
+    messages:
+      not_saved: Not saved
+  hu: Magyar
+  lang: Nyelv
   layouts:
     navbar:
       dashboard: Kezdőlap
-      settings: Beállítások
-      sign_up: Regisztráció
-      sign_in: Bejelentkezés
-      sign_out: Kijelentkezés
       mailbox: Levelesláda
+      settings: Beállítások
+  marketing:
+    description: Description
+    title: Title

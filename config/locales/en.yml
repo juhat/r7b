@@ -1,17 +1,61 @@
+---
 en:
-  lang: Lang
-  hu: Hungarian
-  en: English
-  confirm: Are you sure?
   buttons:
-    send: Save!
-    save: Save!
     destroy: Destroy!
+    save: Save!
+    send: Save!
+  confirm: Are you sure?
+  devise:
+    confirmations:
+      new:
+        resend_confirmation_title: Resend confirmation title
+    invitations:
+      edit:
+        header: Header
+        submit_button: Submit button
+      new:
+        header: Header
+        submit_button: Submit button
+    mailer:
+      confirmation_instructions:
+        instruction: Instruction
+        link_text: Link text
+      email_changed:
+        your_email_changed_to: Your email changed to
+      invitation_instructions:
+        accept: Accept
+        accept_until: Accept until
+        hello: Hello
+        ignore: Ignore
+        someone_invited_you: Someone invited you
+      magic_link:
+        expirity_message: Expirity message
+        magic_login_instruction: Magic login instruction
+        magic_login_link_text: Magic login link text
+    registrations:
+      edit:
+        cancel_title: Cancel title
+        invite_friends: Invite friends
+        invite_title: Invite title
+        title: Title
+        unconfirmed: Unconfirmed
+    shared:
+      links:
+        resend_confirmation: Resend confirmation
+    sign_in: Sign in
+    sign_out: Sign out
+    sign_up: Sign up
+  en: English
+  errors:
+    messages:
+      not_saved: Not saved
+  hu: Hungarian
+  lang: Lang
   layouts:
     navbar:
       dashboard: Home
-      settings: Settings
-      sign_up: Sign up
-      sign_in: Sign in
-      sign_out: Sign out
       mailbox: Mailbox
+      settings: Settings
+  marketing:
+    description: Description
+    title: Title
