@@ -1,0 +1,4 @@
+en:
+  notifications:
+    post_notification:
+      message: "New post to read: %{title}"

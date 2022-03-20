@@ -14,9 +14,9 @@ module Admin
 
         setting = Setting.new(var: key)
         setting.value = params[:setting][key].strip
-        unless setting.valid?
-          @errors.merge!(setting.errors)
-        end
+        # unless setting.valid?
+        #   @errors.merge!(setting.errors)
+        # end
       end
 
       if @errors.any?

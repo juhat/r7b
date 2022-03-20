@@ -21,4 +21,7 @@ Things you may want to cover:
 
 * Deployment instructions
 
-* ...
+* https://candland.net/2021/08-02-turbo-broadcast-update-to-partial/
+* https://github.com/excid3/noticed
+* https://github.com/hotwired/turbo-rails/blob/main/app/models/concerns/turbo/broadcastable.rb
+* https://github.com/faker-ruby/faker#default

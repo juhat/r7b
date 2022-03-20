@@ -91,3 +91,13 @@ gem "standard", "~> 1.7"
 gem "high_voltage", "~> 3.1"
 
 gem "i18n-tasks", "~> 0.9.37"
+
+gem "noticed", "~> 1.5"
+
+gem "sidekiq", "~> 6.4"
+
+gem "sidekiq-cron", "~> 1.2"
+
+gem "faker", "~> 2.20"
+
+gem "pagy", "~> 5.10"

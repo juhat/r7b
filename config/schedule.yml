@@ -1,0 +1,7 @@
+periodic_test_notification:
+  cron: "*/1 * * * *"
+  class: "TestNotificationJob"
+
+periodic_read_notification:
+  cron: "*/10 * * * *"
+  class: "NotificationReadJob"

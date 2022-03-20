@@ -6,7 +6,7 @@ class Setting < RailsSettings::Base
   field :host, default: "http://example.com"
   field :registration_allowed, type: :boolean, default: true
   field :invitation_allowed, type: :boolean, default: true
-  field :maximum_invitation, type: :integer
+  field :maximum_invitation, type: :integer, validates: { presence: true, inclusion: { in: 1...100 } }
 
   field :restrict_access_to_allowed_email_addresses, type: :boolean, default: false
   field :allowed_email_addresses, type: :array, separator: /[\n,]/

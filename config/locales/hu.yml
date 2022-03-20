@@ -5,6 +5,9 @@ hu:
     save: Mentés!
     send: Mehet!
   confirm: Biztos vagy benne?
+  notifications:
+    post_notification:
+      message: "Új blogposzt: %{title}"
   devise:
     confirmations:
       new:

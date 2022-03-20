@@ -1,0 +1,5 @@
+<h1>Notifications</h1>
+<%= button_to 'mark as read', notifications_path, class: 'btn btn-primary' %>
+<div id="notifications">
+  <%= render partial: 'notification', collection: current_user.notifications.newest_first.map(&:to_notification) %>
+</div>

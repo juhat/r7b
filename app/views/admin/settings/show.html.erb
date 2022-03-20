@@ -1,11 +1,10 @@
 <%= simple_form_for(Setting.new, url: admin_settings_path) do |f| %>
   <%= f.input :app_name %>
   <%= f.input :host %>
-  <%= f.input :maximum_invitation, as: :range %>
-  <%= f.input :registration_allowed, wrapper: :custom_boolean_switch %>
-  <%= f.input :registration_allowed, as: :boolean, role: 'switch' %>
-  <%= f.input :invitation_allowed, as: :boolean %>
-  <%= f.input :restrict_access_to_allowed_email_addresses, as: :boolean %>
-  <%= f.input :allowed_email_addresses, input_html: { value: Setting.allowed_email_addresses.join(", ") }, as: :text %>
-  <%= f.button :submit, class: 'btn btn-primary' %>
+  <%= f.input :maximum_invitation, as: :range, collection: 1..100, hint: "Invitation number can go from 1..100. Current value is: #{Setting.maximum_invitation}" %>
+  <%= f.input :registration_allowed, wrapper: :custom_boolean_switch, as: :boolean %>
+  <%= f.input :invitation_allowed, wrapper: :custom_boolean_switch, as: :boolean %>
+  <%= f.input :restrict_access_to_allowed_email_addresses, wrapper: :custom_boolean_switch, as: :boolean %>
+  <%= f.input :allowed_email_addresses, input_html: { value: Setting.allowed_email_addresses.to_a.join(", ") }, as: :text %>
+  <%= f.button :submit, t('buttons.save'), class: 'btn btn-primary' %>
 <% end %>

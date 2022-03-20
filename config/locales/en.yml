@@ -5,6 +5,9 @@ en:
     save: Save!
     send: Save!
   confirm: Are you sure?
+  posts:
+    index:
+      title: Posts
   devise:
     confirmations:
       new:
