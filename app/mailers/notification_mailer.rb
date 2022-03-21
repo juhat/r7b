@@ -3,9 +3,9 @@ class NotificationMailer < ApplicationMailer
   # Subject can be set in your I18n file at config/locales/en.yml
   # with the following lookup:
   #
-  #   en.notification_mailer.post_notification.subject
+  #   en.notification_mailer.announcement_notification.subject
   #
-  def post_notification
+  def announcement_notification
     @greeting = "Hi"
 
     mail to: "to@example.org"

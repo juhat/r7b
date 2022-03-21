@@ -1,6 +1,6 @@
 Rails.application.routes.draw do
   resources :notifications, only: %w[index create]
-  resources :posts
+  resources :announcements
   mount LetterOpenerWeb::Engine, at: "/letter_opener" if Rails.env.development?
 
   devise_for :users,
@@ -22,7 +22,7 @@ Rails.application.routes.draw do
 
   authenticated :user do
     # root "high_voltage/pages#show", id: "dashboard",
-    root "posts#index", as: :authenticated_root
+    root "high_voltage/pages#show", id: "dashboard", as: :authenticated_root
   end
 
   devise_scope :user do

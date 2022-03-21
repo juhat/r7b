@@ -5,9 +5,9 @@ en:
     save: Save!
     send: Save!
   confirm: Are you sure?
-  posts:
+  announcements:
     index:
-      title: Posts
+      title: What's new?
   devise:
     confirmations:
       new:
@@ -59,6 +59,7 @@ en:
       dashboard: Home
       mailbox: Mailbox
       settings: Settings
+      announcements: What's new
   marketing:
     description: Description
     title: Title

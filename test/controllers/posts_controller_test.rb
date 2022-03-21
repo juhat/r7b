@@ -1,48 +1,48 @@
 require "test_helper"
 
-class PostsControllerTest < ActionDispatch::IntegrationTest
+class AnnouncementsControllerTest < ActionDispatch::IntegrationTest
   setup do
-    @post = posts(:one)
+    @announcement = announcements(:one)
   end
 
   test "should get index" do
-    get posts_url
+    get announcements_url
     assert_response :success
   end
 
   test "should get new" do
-    get new_post_url
+    get new_announcement_url
     assert_response :success
   end
 
-  test "should create post" do
-    assert_difference("Post.count") do
-      post posts_url, params: { post: { title: @post.title } }
+  test "should create announcement" do
+    assert_difference("Announcement.count") do
+      announcement announcements_url, params: { announcement: { title: @announcement.title } }
     end
 
-    assert_redirected_to post_url(Post.last)
+    assert_redirected_to announcement_url(Announcement.last)
   end
 
-  test "should show post" do
-    get post_url(@post)
+  test "should show announcement" do
+    get announcement_url(@announcement)
     assert_response :success
   end
 
   test "should get edit" do
-    get edit_post_url(@post)
+    get edit_announcement_url(@announcement)
     assert_response :success
   end
 
-  test "should update post" do
-    patch post_url(@post), params: { post: { title: @post.title } }
-    assert_redirected_to post_url(@post)
+  test "should update announcement" do
+    patch announcement_url(@announcement), params: { announcement: { title: @announcement.title } }
+    assert_redirected_to announcement_url(@announcement)
   end
 
-  test "should destroy post" do
-    assert_difference("Post.count", -1) do
-      delete post_url(@post)
+  test "should destroy announcement" do
+    assert_difference("Announcement.count", -1) do
+      delete announcement_url(@announcement)
     end
 
-    assert_redirected_to posts_url
+    assert_redirected_to announcements_url
   end
 end

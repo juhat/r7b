@@ -21,7 +21,7 @@ puts "Admin user created with #{admin.email}"
 puts "Normal user created with #{user.email}"
 
 11.times do |num|
-  Post.create!(
+  Announcement.create!(
     user: [admin, user].shuffle.first,
     title: Faker::Book.title,
     content: Faker::Lorem.paragraphs(
@@ -30,4 +30,4 @@ puts "Normal user created with #{user.email}"
   )
 end
 
-puts "11 posts are created with random authors"
+puts "11 announcements are created with random authors"

@@ -5,7 +5,7 @@ class TestNotificationJob < ApplicationJob
     admin = User.find_by(email: "admin@example.com")
     user = User.find_by(email: "user@example.com")
 
-    Post.create!(
+    Announcement.create!(
       user: [admin, user].shuffle.first,
       title: Faker::Book.title,
       content: Faker::Lorem.paragraphs(

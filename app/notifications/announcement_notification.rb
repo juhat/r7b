@@ -1,20 +1,20 @@
 # To deliver this notification:
 #
-# PostNotification.with(post: @post).deliver_later(current_user)
-# PostNotification.with(post: @post).deliver(current_user)
+# AnnouncementNotification.with(announcement: @announcement).deliver_later(current_user)
+# AnnouncementNotification.with(announcement: @announcement).deliver(current_user)
 
-class PostNotification < Noticed::Base
+class AnnouncementNotification < Noticed::Base
   deliver_by :database
   deliver_by :email, mailer: "NotificationMailer", delay: 2.minutes, unless: :read?
 
-  param :post
+  param :announcement
 
   def message
-    t(".message", title: params[:post].title)
+    t(".message", title: params[:announcement].title)
   end
 
   def url
-    post_path(params[:post])
+    announcement_path(params[:announcement])
   end
 
   after_database :update_message_count

@@ -30,6 +30,9 @@
       <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
         <% if current_user %>
           <li class="nav-item">
+            <%= link_to t(".announcements"), announcements_path, class: 'nav-link btn' %>
+          </li>
+          <li class="nav-item">
             <%= link_to notifications_path, class: 'nav-link btn position-relative' do %>
               <% if current_user.notifications.unread.any? %>
                 <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-bell-fill" viewBox="0 0 16 16">

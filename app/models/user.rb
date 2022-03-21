@@ -4,7 +4,7 @@ class User < ApplicationRecord
   attr_accessor :password, :encrypted_password
   has_many :invites, as: :invited_by, class_name: "User"
   has_many :notifications, as: :recipient, dependent: :destroy
-  has_many :posts, dependent: :destroy
+  has_many :announcements, dependent: :destroy
 
   scope :admin, -> { where(admin: true) }
 

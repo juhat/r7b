@@ -1,41 +1,41 @@
 require "application_system_test_case"
 
-class PostsTest < ApplicationSystemTestCase
+class AnnouncementsTest < ApplicationSystemTestCase
   setup do
-    @post = posts(:one)
+    @announcement = announcements(:one)
   end
 
   test "visiting the index" do
-    visit posts_url
-    assert_selector "h1", text: "Posts"
+    visit announcements_url
+    assert_selector "h1", text: "Announcements"
   end
 
-  test "should create post" do
-    visit posts_url
-    click_on "New post"
+  test "should create announcement" do
+    visit announcements_url
+    click_on "New announcement"
 
-    fill_in "Title", with: @post.title
-    click_on "Create Post"
+    fill_in "Title", with: @announcement.title
+    click_on "Create Announcement"
 
-    assert_text "Post was successfully created"
+    assert_text "Announcement was successfully created"
     click_on "Back"
   end
 
-  test "should update Post" do
-    visit post_url(@post)
-    click_on "Edit this post", match: :first
+  test "should update Announcement" do
+    visit announcement_url(@announcement)
+    click_on "Edit this announcement", match: :first
 
-    fill_in "Title", with: @post.title
-    click_on "Update Post"
+    fill_in "Title", with: @announcement.title
+    click_on "Update Announcement"
 
-    assert_text "Post was successfully updated"
+    assert_text "Announcement was successfully updated"
     click_on "Back"
   end
 
-  test "should destroy Post" do
-    visit post_url(@post)
-    click_on "Destroy this post", match: :first
+  test "should destroy Announcement" do
+    visit announcement_url(@announcement)
+    click_on "Destroy this announcement", match: :first
 
-    assert_text "Post was successfully destroyed"
+    assert_text "Announcement was successfully destroyed"
   end
 end

@@ -1,4 +1,4 @@
-class Post < ApplicationRecord
+class Announcement < ApplicationRecord
   belongs_to :user
 
   has_rich_text :content
@@ -9,6 +9,6 @@ class Post < ApplicationRecord
   private
 
   def notify_people
-    PostNotification.with(post: self).deliver_later(User.all)
+    AnnouncementNotification.with(announcement: self).deliver_later(User.all)
   end
 end

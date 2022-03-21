@@ -1,0 +1,11 @@
+<turbo-frame id="announcements">
+  <h2 class="mb-4"><%= t(".title") %></h2>
+
+  <% @announcements.each do |announcement| %>
+    <%= render announcement %>
+  <% end %>
+</turbo-frame>
+
+<%== pagy_bootstrap_nav(@pagy) %>
+
+<%= link_to "New announcement", new_announcement_path %>

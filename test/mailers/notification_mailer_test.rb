@@ -1,9 +1,9 @@
 require "test_helper"
 
 class NotificationMailerTest < ActionMailer::TestCase
-  test "post_notification" do
-    mail = NotificationMailer.post_notification
-    assert_equal "Post notification", mail.subject
+  test "announcement_notification" do
+    mail = NotificationMailer.announcement_notification
+    assert_equal "Announcement notification", mail.subject
     assert_equal ["to@example.org"], mail.to
     assert_equal ["from@example.com"], mail.from
     assert_match "Hi", mail.body.encoded
