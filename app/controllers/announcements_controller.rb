@@ -5,8 +5,7 @@ class AnnouncementsController < ApplicationController
 
   # GET /announcements or /announcements.json
   def index
-    sleep 1
-    @pagy, @announcements = pagy(Announcement.all, items: params[:items] ? params[:items].to_i : 10)
+    @pagy, @announcements = pagy(Announcement.order(created_at: :desc), items: params[:items] ? params[:items].to_i : 10)
   end
 
   # GET /announcements/1 or /announcements/1.json
@@ -24,7 +23,7 @@ class AnnouncementsController < ApplicationController
 
   # POST /announcements or /announcements.json
   def create
-    @announcement = Announcement.new(announcement_params)
+    @announcement = Announcement.new(announcement_params.merge(user: current_user))
 
     respond_to do |format|
       if @announcement.save
@@ -68,6 +67,6 @@ class AnnouncementsController < ApplicationController
 
     # Only allow a list of trusted parameters through.
     def announcement_params
-      params.require(:announcement).permit(:title, :content)
+      params.require(:announcement).permit(:title, :summary, :content)
     end
 end

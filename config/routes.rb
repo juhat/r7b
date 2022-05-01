@@ -1,5 +1,5 @@
 Rails.application.routes.draw do
-  resources :notifications, only: %w[index create]
+  resources :notifications, only: %w[index show create]
   resources :announcements
   mount LetterOpenerWeb::Engine, at: "/letter_opener" if Rails.env.development?
 
@@ -16,6 +16,7 @@ Rails.application.routes.draw do
   end
 
   namespace :admin do
+    get 'utilities/notification'
     resource :settings
   end
 

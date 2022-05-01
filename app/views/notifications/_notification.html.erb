@@ -1,7 +1,9 @@
-<div class="card my-2">
+<div class="card my-4">
   <div class="card-body">
-    <% if notification.unread? %><b><% end %>
-      <%= link_to notification.message, notification.url %>
-    <% if notification.read? %></b><% end %>
+    <h5 class="card-title">
+      <% if notification.unread? %><b><% end %>
+        <%= link_to notification.message, notification.url %>
+      <% if notification.read? %></b><% end %>
+    </h5>
   </div>
 </div>

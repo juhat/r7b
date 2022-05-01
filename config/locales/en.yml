@@ -7,7 +7,7 @@ en:
   confirm: Are you sure?
   announcements:
     index:
-      title: What's new?
+      title: Platform news
   devise:
     confirmations:
       new:
@@ -59,7 +59,7 @@ en:
       dashboard: Home
       mailbox: Mailbox
       settings: Settings
-      announcements: What's new
+      announcements: Platform news
   marketing:
     description: Description
     title: Title

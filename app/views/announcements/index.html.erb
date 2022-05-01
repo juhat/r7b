@@ -1,6 +1,5 @@
 <turbo-frame id="announcements">
-  <h2 class="mb-4"><%= t(".title") %></h2>
-
+  <%= turbo_stream_from "announcements" %>
   <% @announcements.each do |announcement| %>
     <%= render announcement %>
   <% end %>

@@ -25,3 +25,4 @@ Things you may want to cover:
 * https://github.com/excid3/noticed
 * https://github.com/hotwired/turbo-rails/blob/main/app/models/concerns/turbo/broadcastable.rb
 * https://github.com/faker-ruby/faker#default
+* https://blog.corsego.com/turbo-hotwire-broadcasts

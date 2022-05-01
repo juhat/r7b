@@ -4,16 +4,16 @@ git_source(:github) { |repo| "https://github.com/#{repo}.git" }
 ruby "3.1.1"
 
 # Bundle edge Rails instead: gem "rails", github: "rails/rails", branch: "main"
-gem "rails", "~> 7.0.2", ">= 7.0.2.2"
+gem "rails"
 
 # The original asset pipeline for Rails [https://github.com/rails/sprockets-rails]
 gem "sprockets-rails"
 
 # Use sqlite3 as the database for Active Record
-gem "sqlite3", "~> 1.4"
+gem "sqlite3"
 
 # Use the Puma web server [https://github.com/puma/puma]
-gem "puma", "~> 5.0"
+gem "puma"
 
 # Bundle and transpile JavaScript [https://github.com/rails/jsbundling-rails]
 gem "jsbundling-rails"
@@ -31,7 +31,7 @@ gem "cssbundling-rails"
 gem "jbuilder"
 
 # Use Redis adapter to run Action Cable in production
-gem "redis", "~> 4.0"
+gem "redis"
 
 # Use Kredis to get higher-level data types in Redis [https://github.com/rails/kredis]
 # gem "kredis"
@@ -75,29 +75,17 @@ group :test do
   gem "webdrivers"
 end
 
-gem "simple_form", "~> 5.1"
-# gem "ruby-vips"
-gem "devise", "~> 4.8"
+gem "simple_form"
+gem "devise"
 gem "devise-passwordless", git: "git@github.com:abevoelker/devise-passwordless.git"
-
-gem "devise_invitable", "~> 2.0"
-
-gem "rails-settings-cached", "~> 2.8"
-
-gem "rails-i18n", "~> 7.0"
-
-gem "standard", "~> 1.7"
-
-gem "high_voltage", "~> 3.1"
-
-gem "i18n-tasks", "~> 0.9.37"
-
-gem "noticed", "~> 1.5"
-
-gem "sidekiq", "~> 6.4"
-
-gem "sidekiq-cron", "~> 1.2"
-
-gem "faker", "~> 2.20"
-
-gem "pagy", "~> 5.10"
+gem "devise_invitable"
+gem "rails-settings-cached"
+gem "rails-i18n"
+gem "standard"
+gem "high_voltage"
+gem "i18n-tasks"
+gem "noticed"
+gem "sidekiq"
+gem "sidekiq-cron"
+gem "faker"
+gem "pagy"

@@ -1,4 +1,4 @@
 en:
   notifications:
     announcement_notification:
-      message: "New announcement to read: %{title}"
+      message: "Announcement: %{title}"

@@ -1,7 +1,7 @@
 // Entry point for the build script in your package.json
 import "@hotwired/turbo-rails"
 import "./controllers"
-// import * as bootstrap from "bootstrap"
+import * as bootstrap from "bootstrap"
 import "trix"
 import "@rails/actiontext"
 
@@ -17,6 +17,11 @@ document.addEventListener("turbo:load", () => {
   var popoverTriggerList = [].slice.call(document.querySelectorAll('[data-bs-toggle="popover"]'))
   var popoverList = popoverTriggerList.map(function (popoverTriggerEl) {
     return new bootstrap.Popover(popoverTriggerEl)
+  })
+
+  var dropdownElementList = [].slice.call(document.querySelectorAll('.dropdown-toggle'))
+  var dropdownList = dropdownElementList.map(function (dropdownToggleEl) {
+    return new bootstrap.Dropdown(dropdownToggleEl)
   })
 })
 document.addEventListener("turbo:submit-start", (event) => {

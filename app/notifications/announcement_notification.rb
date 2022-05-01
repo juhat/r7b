@@ -21,7 +21,6 @@ class AnnouncementNotification < Noticed::Base
 
   def update_message_count
     recipient.broadcast_action :update, target: "notification-count", html: recipient.notifications.unread.count.to_s
-    Rails.logger.info self.record
     # recipient.broadcast_action :prepend, target: "notifications", partial: 'notifications/notification', object: self.record
   end
 end
