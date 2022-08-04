@@ -1,0 +1,35 @@
+<div class="fixed-bottom bg-light">
+  <div class="container">
+    <div class="container">
+      <div class="row align-items-start">
+        <ul class="col">
+          <% if Rails.env.development? %>
+            <li class="nav-item">
+              <%= link_to t('.mailbox'), letter_opener_web_path, class: 'nav-link' %>
+            </li>
+          <% end %>
+
+          <li class="nav-item dropdown border-start">
+            <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+              <%= t('lang') %>
+            </a>
+            <ul class="dropdown-menu dropdown-menu-end" aria-labelledby="navbarDropdown">
+              <% I18n.available_locales.select{ |lang| lang != I18n.locale }.each do |lang| %>
+                <li>
+                  <%= link_to t(lang), root_path(lang: lang), class: 'dropdown-item' %>
+                </li>
+              <% end %>
+            </ul>
+          </li>
+
+        </ul>
+        <ul class="col">
+          One of three columns
+        </ul>
+        <ul class="col">
+          One of three columns
+        </ul>
+      </div>
+    </div>
+  </div>
+</div>

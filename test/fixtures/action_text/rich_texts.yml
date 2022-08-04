@@ -2,3 +2,11 @@
 #   record: name_of_fixture (ClassOfFixture)
 #   name: content
 #   body: <p>In a <i>million</i> stars!</p>
+
+# Rich content for announcements
+<% 1000.times do |n| %>
+rixh_text_for_announcements_<%= n %>:
+  record: announcement_<%= n %> (Announcement)
+  name: content
+  body: <%= Faker::Lorem.paragraphs(number: (5..10).to_a.shuffle.first).map { |paragraph| "<p>#{paragraph}</p>" }.join %>
+<% end %>

@@ -59,7 +59,12 @@ en:
       dashboard: Home
       mailbox: Mailbox
       settings: Settings
-      announcements: Platform news
+      announcements: News
+    navbar_signed_in:
+      dashboard: Home
+      mailbox: Mailbox
+      settings: Settings
+      announcements: News
   marketing:
     description: Description
     title: Title

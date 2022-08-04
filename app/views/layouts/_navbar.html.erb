@@ -9,43 +9,8 @@
         <li class="nav-item">
           <%= link_to t('.dashboard'), root_path, class: 'nav-link' %>
         </li>
-        <% if Rails.env.development? %>
-          <li class="nav-item">
-            <%= link_to t('.mailbox'), letter_opener_web_path, class: 'nav-link' %>
-          </li>
-        <% end %>
-        <% if current_user&.admin? %>
-          <li class="nav-item dropdown">
-            <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-              Admin
-            </a>
-            <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
-              <li>
-                <%= link_to t('.settings'), admin_settings_path, class: 'dropdown-item' %>
-              </li>
-              <li>
-                <%= link_to t('.new_notification'), admin_utilities_notification_path, class: 'dropdown-item' %>
-              </li>
-            </ul>
-          </li>
-        <% end %>
       </ul>
       <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
-        <% if current_user %>
-          <li class="nav-item border-end">
-            <%= turbo_stream_from current_user, "notifications" %>
-            <%= turbo_frame_tag 'notification-count', src: notification_path(1) %>
-          </li>
-          <li class="nav-item">
-            <%= link_to t(".announcements"), announcements_path, class: 'nav-link btn' %>
-          </li>
-          <li class="nav-item">
-            <%= link_to current_user.email, edit_user_registration_path, class: 'nav-link btn' %>
-          </li>
-          <li class="nav-item">
-            <%= button_to t('devise.sign_out'), destroy_user_session_path, method: :delete, data: {confirm: t('confirm')}, class: 'nav-link btn' %>
-          </li>
-        <% else %>
           <li class="nav-item">
             <%= link_to t('devise.sign_in'), new_user_session_path, class: 'nav-link btn' %>
           </li>
@@ -54,13 +19,12 @@
               <%= link_to t('devise.sign_up'), new_user_registration_path, class: 'nav-link btn' %>
             </li>
           <% end %>
-        <% end %>
         <% if Setting.language_setting_allowed && I18n.available_locales.count > 1 %>
           <li class="nav-item dropdown border-start">
             <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
               <%= t('lang') %>
             </a>
-            <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+            <ul class="dropdown-menu dropdown-menu-end" aria-labelledby="navbarDropdown">
               <% I18n.available_locales.select{ |lang| lang != I18n.locale }.each do |lang| %>
                 <li>
                   <%= link_to t(lang), root_path(lang: lang), class: 'dropdown-item' %>

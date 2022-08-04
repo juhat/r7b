@@ -24,6 +24,7 @@ document.addEventListener("turbo:load", () => {
     return new bootstrap.Dropdown(dropdownToggleEl)
   })
 })
+
 document.addEventListener("turbo:submit-start", (event) => {
   const button = event.target.querySelector("[data-confirm]")
   const message = button?.dataset?.confirm

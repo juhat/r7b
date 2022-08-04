@@ -21,6 +21,8 @@ class AnnouncementNotification < Noticed::Base
 
   def update_message_count
     recipient.broadcast_action :update, target: "notification-count", html: recipient.notifications.unread.count.to_s
+    recipient.broadcast_action :append, target: "toast-container", partial: 'notifications/toast'
+
     # recipient.broadcast_action :prepend, target: "notifications", partial: 'notifications/notification', object: self.record
   end
 end
